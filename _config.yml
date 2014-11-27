@@ -1,0 +1,60 @@
+# Harmony Jekyll theme general configurations 
+encoding: utf-8
+
+# Base URL
+baseurl: 
+
+# Site live URL
+#url: http://dzikowski.github.io
+
+# Localhost 
+url: http://127.0.0.1:4000  
+
+# Harmony theme configuration. Please change accordingly.
+harmony:
+  name: dzikowski @ github
+  # Little description about your site
+  description: Piszę głównie o Kafce, Storm, Spark, Scalding,<br/>MapReduce i innych technologiach big data.
+  meta_description: Piszę głównie o Kafce, Storm, Spark, Scalding, MapReduce i innych technologiach big data.
+  basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
+  author: # Author details
+    name: Jakub Dzikowski
+    email: jakub.t.dzikowski@gmail.com
+    url: http://dzikowski.github.io
+
+  # Google Analytics key, leave blank to ignore
+  google_analytics_key: 
+
+  # Profile links, leave blank to ignore
+  social: 
+    github: dzikowski
+    twitter: 
+    facebook: jakub.t.dzikowski
+    gplus: 
+    dribble: 
+    pinterest: 
+    linkedin: jakub-dzikowski
+    mail: jakub.t.dzikowski@gmail.com
+  # Toggle disclaimer in footer
+  show_disclaimer: false
+
+# Conversion / Build settings 
+markdown:    kramdown
+highlighter: pygments # this is how you put pygments config in jekyll 2.0 instead of pygments: true
+
+# Permalinks
+permalink:        pretty
+
+exclude: 
+  - CNAME
+  - Gemfile
+  - Rakefile
+  - README.md
+  - .gitignore
+  - .sass-cache
+  - Gemfile.lock
+
+# Sass conversion configs
+sass:
+    sass_dir: assets/css/_sass
+    style: :compressed

@@ -1,0 +1,53 @@
+<h6>Skontaktuj się</h6>
+
+<ul class="social-media">
+
+    {% if site.harmony.social.linkedin %}
+    <li>
+        <a title="{{ site.harmony.social.linkedin }} na LinkedIn" 
+            href="linkedin.com/pub/{{ site.harmony.social.linkedin }}" 
+            class="linkedin wc-img-replace" target="_blank">LinkedIn</a>
+    </li>   
+    {% endif %}
+
+    {% if site.harmony.social.github %}
+    <li>
+        <a title="{{ site.harmony.social.github }} na Github" 
+            href="https://github.com/{{ site.harmony.social.github }}" 
+            class="github wc-img-replace" target="_blank">Github</a>
+    </li>
+    {% endif %} 
+
+    {% if site.harmony.social.facebook %}
+    <li>
+        <a title="{{ site.harmony.social.facebook }} na Facebooku" 
+            href="https://facebook.com/{{ site.harmony.social.facebook }}" 
+            class="facebook wc-img-replace" target="_blank">Facebook</a>
+    </li>
+    {% endif %}
+
+    {% if site.harmony.social.twitter %}
+    <li>
+        <a title="{{ site.harmony.social.twitter }} na Twitterze" 
+            href="https://twitter.com/{{ site.harmony.social.twitter }}" 
+            class="twitter wc-img-replace" target="_blank">Twitter</a>
+    </li>   
+    {% endif %}
+
+    {% if site.harmony.social.gplus %}
+    <li>
+        <a title="{{ site.harmony.social.gplus }} na Google Plus" 
+            href="https://plus.google.com/{{ site.harmony.social.gplus }}" 
+            class="google wc-img-replace" target="_blank">Google</a>
+    </li>
+    {% endif %}
+
+    {% if site.harmony.social.mail %}
+    <li>
+        <a title="{{ site.harmony.social.mail }}" 
+            href="mailto:{{ site.harmony.social.mail }}" 
+            class="mail wc-img-replace" target="_blank">E-mail</a>
+    </li>
+    {% endif %}
+
+</ul>
