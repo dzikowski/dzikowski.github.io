@@ -12,9 +12,9 @@ url: http://127.0.0.1:4000
 
 # Harmony theme configuration. Please change accordingly.
 harmony:
-  name: dzikowski @ github
+  name: dzikowski.github.io
   # Little description about your site
-  description: Piszę głównie o Kafce, Storm, Spark, Scalding,<br/>MapReduce i innych technologiach big data.
+  description: Piszę głównie o Kafce, Storm, Spark, Scalding, MapReduce i innych technologiach big data.
   meta_description: Piszę głównie o Kafce, Storm, Spark, Scalding, MapReduce i innych technologiach big data.
   basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
   author: # Author details

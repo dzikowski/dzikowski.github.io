@@ -76,6 +76,10 @@ h1 {
   @include MQ(M) {
     @include font-size(36px);
   }
+  border-bottom: 1px solid $base-05;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-botom: -10px;
 }
 
 h2 {
@@ -115,7 +119,7 @@ h6 {
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.75;
   @include font-size(14px);
   @include MQ(M) {
     @include font-size(18px);
@@ -165,7 +169,8 @@ a.default-anchor {
   color: $base-08;
   &:hover, &:active, &:focus {
     @include transition(border-bottom-color 0.4s);
-    border-bottom-color: $base-08;
+    color: $base-0B;
+    border-bottom-color: $base-0B;
   }
 
 }
@@ -193,7 +198,7 @@ header.main-header, footer.main-footer {
 
 header.main-header {
   color: $base-00;
-  /*border-top: 5px $base-00 solid;*/
+  border-top: 5px $base-00 solid;
 
   h1, h2 { text-align: center; color: inherit;}
   a { 
@@ -210,9 +215,8 @@ header.main-header {
   }
   ul li {       
     display: inline-block;
+    margin-right: 10px;
     position:relative;
-    color: $base-08;
-    text-shadow: 1px 1px 2px $base-01;
   }
 
   ul li span {
@@ -221,20 +225,15 @@ header.main-header {
     width: 15px;
   }
 
-  ul li a { 
+  ul li a {
     display:inline-block;
-    color: inherit;
     padding-bottom:5px;
+    @extend .default-anchor;
     @include transition(all, 0.4s);
     @include MQ(M) {
       @include font-size(18px);
     }
-    &:hover, &:focus, &:active {
-      text-shadow: 1px 1px 2px transparent;
-      color: $base-01;
-      @include transition(all, 0.4s);     
-    }
-  }
+  } 
 }
 
 footer.main-footer {
@@ -301,7 +300,7 @@ footer.main-footer {
     border-bottom-color: transparent;
 
     &:hover {
-      background-color: $base-08;
+      background-color: $base-0B;
     }
   }
     
@@ -468,7 +467,6 @@ div.page-content {
   }
 
   h1, h2, h3, h4, h5, h6 { 
-    padding-bottom: 5px;
   }
 }
 
@@ -497,26 +495,29 @@ body.theme-base-01 {
 
   header.main-header {
     color: $base-01;
-    background: url('/assets/img/green-noise.png');
-    border-bottom: 1px solid $base-01;
+    background: url('/assets/img/ps_neutral.png');
+    border-bottom: 1px solid $base-05;
     h1 {
-      font-size: 3.2em;
+      font-size: 2.4em;
       font-weight: bold;
+      @include MQ(M) { font-size: 3.3em; }
     }
     h2 {
       font-size: 1.4em;
     }
     ul li { 
-      color: $base-0A;
+      color: $base-08;
     }
     #face {
-      float: left;
       background: url('/assets/img/face.png');
       background-position: center center;
-      border-radius: 99em;
-      border: 1px $base-01 solid;
-      height: 206px;
-      width: 206px;
+      border-radius: 0.2em;
+      border: 2px $base-05 solid;
+      height: 204px;
+      width: 204px;
+      display: block;
+      margin: auto;
+      @include MQ(M) { float: left; }
     }
   }
 
@@ -590,9 +591,7 @@ pre {
   @include font-size(12px);
   line-height: 1.4;
   white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
+  overflow: auto;
   background-color: $color-white;
   border: 1px solid $base-05;
   code {
@@ -787,4 +786,80 @@ th {
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: $base-05;
+}
+
+/* -----------------------------------
+
+  Autonumbering headers
+
+-------------------------------------*/
+
+body {
+  counter-reset: h2;
+}
+h2 {
+  counter-reset: h3;
+}
+h2:before {
+  counter-increment: h2;
+  content: counter(h2) ". ";
+  color: $color-2;
+}
+h3:before {
+  counter-increment: h3;
+  content: counter(h2) "." counter(h3) ". ";
+  color: $color-2;
+}
+h2.nocount:before, h3.nocount:before { 
+  content: "";
+  counter-increment: none;
+  display: none;
+} 
+
+/* -----------------------------------
+
+  Navigation
+
+-------------------------------------*/
+
+nav {
+  border: 1px solid $base-05;
+  border-radius: 0.8em;
+  background: $base-0A;
+}
+
+nav li {
+  display: block;
+  font-size: .9rem;
+  vertical-align: top;
+  margin-right: 0.5em;
+}
+
+nav .scroll-nav__heading {
+  font-weight: bold;
+  font-size: .9rem;
+  margin: 1em;
+  display: block;
+  text-align: center;
+}
+
+#navbar {
+    @media screen and (min-width: 1240px) {
+        position: fixed;
+        width: 1px;
+        height: 1px;
+    }
+}
+#navbar nav {
+    @media screen and (min-width: 1240px) {
+        position: relative;
+        width: 200px;
+        left: 790px;
+        top: -100px;
+    }
+     @media screen and (min-width: 1340px) {
+        position: relative;
+        left: 810px;
+        width: 240px;
+    }
 }

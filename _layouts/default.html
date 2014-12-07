@@ -12,8 +12,15 @@
         <!-- Harmony styles -->
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/main.css">
 
+        <!-- jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+        
         <!-- Modernizr js -->
         <script async src="{{ site.baseurl }}/assets/js/modernizr.js"></script>    
+        
+        <!-- http://scrollnav.com/ -->
+        <script src="{{ site.baseurl }}/assets/js/jquery.scrollNav.min.js"></script>    
 
         <!-- IE Fixes -->
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -27,7 +34,7 @@
         <header class="main-header">
             <div class="wc-container">
                 <h1><a href="{{ site.baseurl }}/"><span id="face"></span> {{ site.harmony.name }}</a></h1>
-                <h2>{{ site.harmony.description }}</h2>
+                <h2 class="nocount">{{ site.harmony.description }}</h2>
                 {% include header-links.html %}                
             </div>
         </header>
@@ -58,10 +65,6 @@
           if (raf) raf(cb);
           else window.addEventListener('load', cb);
         </script>
-        <!-- jQuery -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <!-- When no internet load JQuery from local -->
-        <script>window.jQuery || document.write('<script src="{{ site.baseurl }}/assets/js/jquery.min.js"><\/script>')</script>
         <!-- Site js -->
         <script src="{{ site.baseurl }}/assets/js/all.js"></script>
         <!-- Google analytics  -->
