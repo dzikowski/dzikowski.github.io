@@ -168,7 +168,7 @@ a.default-anchor {
   border-bottom: 1px solid transparent;
   color: $base-08;
   &:hover, &:active, &:focus {
-    @include transition(border-bottom-color 0.4s);
+    @include transition(all 0.2s);
     color: $base-0B;
     border-bottom-color: $base-0B;
   }
@@ -200,7 +200,15 @@ header.main-header {
   color: $base-00;
   border-top: 5px $base-00 solid;
 
-  h1, h2 { text-align: center; color: inherit;}
+  h1, h2 { 
+    text-align: center; 
+    background-color: #565656;
+    color: transparent;
+    text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+  }
   a { 
     color: inherit;
     &:hover, &:active, &:focus {
@@ -495,7 +503,7 @@ body.theme-base-01 {
 
   header.main-header {
     color: $base-01;
-    background: url('/assets/img/ps_neutral.png');
+    background: url('/assets/img/background.png');
     border-bottom: 1px solid $base-05;
     h1 {
       font-size: 2.4em;
