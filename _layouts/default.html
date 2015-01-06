@@ -32,25 +32,31 @@
     </head>
     <body class="{{ site.harmony.basetheme }}">
         <header class="main-header">
-            <div class="wc-container">
-                <h1><a href="{{ site.baseurl }}/"><span id="face"></span> {{ site.harmony.name }}</a></h1>
-                <h2 class="nocount">{{ site.harmony.description }}</h2>
-                {% include header-links.html %}                
+            <div class="shift">
+                <div class="wc-container">
+                    <h1><a href="{{ site.baseurl }}/"><span id="face"></span> {{ site.harmony.name }}</a></h1>
+                    <h2 class="nocount">{{ site.harmony.description }}</h2>
+                    {% include header-links.html %}                
+                </div>
             </div>
         </header>
-        {{ content }}
+        <div class="shift">
+            {{ content }}
+        </div>
         <footer class="main-footer">
-            <div class="wc-container">
-                <div class="column one">
-                    {% include footer-links.html %}                    
+            <div class="shift">
+                <div class="wc-container">
+                    <div class="column one">
+                        {% include footer-links.html %}                    
+                    </div>
+                    <div class="column two">
+                        {% include social.html %}
+                    </div>
                 </div>
-                <div class="column two">
-                    {% include social.html %}
-                </div>
+                <p class="wc-container disclaimer">
+                    {% include footer.html %}
+                </p>
             </div>
-            <p class="wc-container disclaimer">
-                {% include footer.html %}
-            </p>
         </footer>
         <script type="text/javascript">
           /* To avoid render blocking css */
