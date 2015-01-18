@@ -842,7 +842,11 @@ h2.nocount:before, h3.nocount:before {
 nav {
   border: 1px solid $base-05;
   border-radius: 0.8em;
-  background: $base-0A;
+  @media screen and (min-width: 1140px) {
+    border: 0;
+    border-left: 1px solid $base-05;
+    border-radius: 0em;
+  }
 }
 
 nav li {
@@ -855,9 +859,8 @@ nav li {
 nav .scroll-nav__heading {
   font-weight: bold;
   font-size: .9rem;
-  margin: 1em;
+  padding: 1em 2em;
   display: block;
-  text-align: center;
 }
 
 /* shift content left if not mobile */
@@ -880,7 +883,7 @@ nav .scroll-nav__heading {
     position: relative;
     width: 240px;
     left: 820px;
-    top: -100px;
+    top: -69px;
   }
 }
 
