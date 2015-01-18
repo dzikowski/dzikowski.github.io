@@ -153,3 +153,15 @@ Warto zajrzeć
   - Krótka [odpowiedź](http://www.quora.com/When-would-someone-use-Apache-Tez-instead-of-Apache-Spark-or-vice-versa) na pytanie, kiedy używać Spark, a kiedy Tez, która w znacznej mierze była inspiracją do powstania mojego wpisu.
   - [Artykuł Microsoftu](http://cs.brown.edu/~debrabant/cis570-website/papers/dryad.pdf) z 2007 roku, opisujący szkielet rozwiązania, które kilka lat później zostało wprowadzone w Tez.
   - [Artykuł](http://www.cs.berkeley.edu/~matei/papers/2010/hotcloud_spark.pdf) Uniwersytetu Berkeley z 2010 roku, opisujący szkielet rozwiązania, które wykorzystywane jest w Spark.
+
+
+Postscriptum (2015-01-14)
+---
+
+Zależności pomiędzy Tez a Spark są jeszcze bardziej zagmatwane.
+Silnikiem wykonywania skryptów Hive i Pig może być nie tylko MapReduce i Tez, ale także Spark ([dla Hive](https://cwiki.apache.org/confluence/display/Hive/Hive+on+Spark%3A+Getting+Started), [dla Pig](http://blog.cloudera.com/blog/2014/09/pig-is-flying-apache-pig-on-apache-spark/)).
+Dodatkowo Hortonworks przygotowało ulepszoną [wersję Spark](http://hortonworks.com/blog/improving-spark-data-pipelines-native-yarn-integration/), która w testowanych przypadkach spisuje się lepiej, bo... sam Spark nie jest wykonywany bezpośrednio w YARN, tylko najpierw optymalizowany przez Tez.
+Czyli Tez staje się silnikiem optymalizacji dla Spark.
+
+W tym świetle nie wydaje się wykluczone, że niedługo wykonywanie skryptów Hive, czy Pig będzie optymalizowane przez Spark optymalizowany przez Tez.
+Widać też wyraźniej zależności pomiędzy tymi projektami: Tez jest narzędziem niższego poziomu, a Spark narzędziem bardziej ogólnym.
