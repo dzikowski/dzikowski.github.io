@@ -12,7 +12,7 @@ jQuery(document).ready(function($){
         sections: 'h2',
         subSections: false, // does not work?
         sectionElem: 'section',
-        showHeadline: true,
+        showHeadline: false,
         headlineText: $('.post h1').html(),
         showTopLink: true,
         topLinkText: 'Początek artykułu',
