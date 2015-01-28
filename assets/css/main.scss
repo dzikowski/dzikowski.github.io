@@ -37,6 +37,7 @@ body {
     size: 100%;
     family: $primary-font; // variables inside partials > _variables.scss
   }
+  letter-spacing: 0.025em;
 }
 
 .wc-container {
@@ -68,6 +69,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 { 
   line-height: 1.6;
+  margin: 1.5em 0 0.2em 0em;
 }
 
 h1 {
@@ -511,15 +513,17 @@ body.theme-base-01 {
 
   header.main-header {
     color: $base-01;
-    background: url('/assets/img/ps_neutral.png');
+    background: url('/assets/img/background.png');
     border-bottom: 1px solid $base-05;
     h1 {
       font-size: 2.4em;
       font-weight: bold;
+      margin: 0;
       @include MQ(M) { font-size: 3.3em; }
     }
     h2 {
       font-size: 1.4em;
+      margin: 0;
     }
     ul li { 
       color: $base-08;
@@ -676,6 +680,7 @@ div.post {
   padding-top: .5em;
   padding-bottom: 1em;
   border-bottom: 1px $base-05 solid;
+  text-align: justify;
   @include MQ(M) {
 
     padding-bottom: 2em;  
@@ -876,7 +881,7 @@ nav .scroll-nav__heading {
     position: fixed;
     width: 240px;
     right: 0px;
-    top: 304px;
+    top: 279px;
     background: #fff;
     min-height: 320px;
     border: 0;
