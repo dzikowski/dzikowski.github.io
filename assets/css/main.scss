@@ -124,7 +124,7 @@ p {
   line-height: 1.75;
   @include font-size(14px);
   @include MQ(M) {
-    @include font-size(18px);
+    @include font-size(16px);
   }
 }
 
@@ -687,12 +687,13 @@ div.posts {
         padding: 0 2em;
         margin-right: -5px;
         vertical-align: top;
-        height: 400px;
+        height: 420px;
     }
 }
-
-.leading .post p {
-    font-size: 0.9em;
+@include MQ(M) {
+    .reading {
+        width: 80%;
+    }
 }
 
 
@@ -879,19 +880,11 @@ nav .scroll-nav__heading {
   display: block;
 }
 
-/* shift content left if not mobile */
-
-.shift {
-  @media screen and (min-width: 1140px) {
-    margin-right: 200px;
-  }
-}
-
 #navbar {
   @media screen and (min-width: 1140px) {
     position: fixed;
-    width: 1px;
-    height: 1px;
+    height: 0px;
+    width: 960px;
   }
 }
 
@@ -899,11 +892,11 @@ nav .scroll-nav__heading {
   padding-top: 15px;
   border: 1px solid $base-05;
   @media screen and (min-width: 1140px) {
-    position: fixed;
-    width: 20%;
-    right: 0px;
-    top: 279px;
+    position: absolute;
+    right: -5em;
+    top: -2em;
     background: #fff;
+    width: 22%;
     min-height: 320px;
     border: 0;
     border-left: 1px solid $base-05;
