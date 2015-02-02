@@ -6,6 +6,7 @@ title: Archiwum bloga
 {% include small-menu.html %} 
 
 <div class="page-content wc-container">
+  <div class="reading">&nbsp;</div>
   <h1>{{ page.title }}</h1>  
   {% for post in site.posts %}
   	{% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
