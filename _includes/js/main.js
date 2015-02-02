@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
         showTopLink: true,
         topLinkText: 'Początek artykułu',
         fixedMargin: 40,
-        scrollOffset: 40,
+        scrollOffset: 100,
         animated: true,
         speed: 500,
         insertTarget: $('#navbar'),

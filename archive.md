@@ -2,6 +2,9 @@
 layout: default
 title: Archiwum bloga
 ---
+
+{% include small-menu.html %} 
+
 <div class="page-content wc-container">
   <h1>{{ page.title }}</h1>  
   {% for post in site.posts %}
