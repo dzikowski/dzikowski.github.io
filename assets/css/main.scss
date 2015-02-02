@@ -136,6 +136,20 @@ a:active, a:hover, a:focus {
   outline: 0;
 }
 
+a.button {
+    font-size: 0.8em;
+    color: #fff !important;
+    background-color: $base-08;
+    padding: 0 .5em;
+    margin: 0 .5em;
+    display: inline-block;
+    border-radius: .5em;
+}
+
+a.button:active, a.button:hover, a.button:focus {
+    background-color: $base-0B;
+}
+
 img {
   border: 0;
   display: block;
@@ -190,12 +204,7 @@ a {
 }
 
 .text-inset {
-  background-color: #565656;
-  color: transparent;
-  text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
+    text-shadow: 0px 0px 15px $base-0A, 0px 0px 10px $base-0A, 0px 0px 5px $base-0A;
 }
 
 header.main-header, footer.main-footer {
@@ -214,10 +223,10 @@ header.main-header, footer.main-footer {
 header.main-header {
   color: $base-00;
   border-top: 5px $base-00 solid;
+  @extend .text-inset;
 
   h1, h2 { 
     text-align: center;
-    @extend .text-inset;
   }
   a { 
     color: inherit;
@@ -512,14 +521,23 @@ body.theme-base-01 {
   }
 
   header.main-header {
-    color: $base-01;
-    background: url('/assets/img/background.png');
-    border-bottom: 1px solid $base-05;
+    
+    color: #272935;
+    background: url("/assets/img/background-cpu-small-4.jpg");
+    border-bottom: 1px solid #e6e1dc;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 6em 0;
+    
     h1 {
+      color: $base-0B;
       font-size: 2.4em;
       font-weight: bold;
+      border: 0;
       margin: 0;
-      @include MQ(M) { font-size: 3.3em; }
+      @include MQ(M) { font-size: 4em; }
     }
     h2 {
       font-size: 1.4em;
@@ -531,7 +549,7 @@ body.theme-base-01 {
     #face {
       background: url('/assets/img/face.png');
       background-position: center center;
-      border-radius: 0.2em;
+      border-radius: 20em;
       border: 2px $base-05 solid;
       height: 204px;
       width: 204px;
@@ -540,7 +558,31 @@ body.theme-base-01 {
       @include MQ(M) { float: left; }
     }
   }
+  
+  header.small {
+    padding: 0;
+    border-bottom: 1px #888 solid;
 
+    @include MQ(M) {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        box-shadow: 0px 0px 15px #fff;
+    }
+    * {
+        vertical-align: baseline;
+    }
+    h1 {
+      font-size: 1.8em;
+      display: inline-block;
+      margin-right: 3em;
+    }
+    ul { 
+      display: inline-block;
+      width: auto;
+    }  
+  }
+  
   div.page-content {
     h1, h2, h3, h4, h5, h6 { color: $base-01; }
   }
@@ -693,6 +735,7 @@ div.posts {
 @include MQ(M) {
     .reading {
         width: 80%;
+        margin-top: 6em;
     }
 }
 
@@ -705,10 +748,6 @@ div.post {
   @include MQ(M) {
 
     padding-bottom: 2em;  
-  }
-
-  &:last-child {
-    border-bottom: none;
   }
 }
 span.post-date {
@@ -766,8 +805,8 @@ span.post-date {
 --------------------------------- */
 .post-footer {
   
-  border-top: 1px solid $base-05;
-  border-bottom: 1px solid $base-05;
+  /*border-top: 1px solid $base-05;
+  border-bottom: 1px solid $base-05;*/
   height: 40px;
   display: table;
   width: 100%;
@@ -894,7 +933,7 @@ nav .scroll-nav__heading {
   @media screen and (min-width: 1140px) {
     position: absolute;
     right: -5em;
-    top: -2em;
+    top: 8em;
     background: #fff;
     width: 22%;
     min-height: 320px;

@@ -1,6 +1,15 @@
 ---
 layout: default
 ---
+
+<header class="main-header">
+    <div class="wc-container">
+        <h1><a href="{{ site.baseurl }}/"><span id="face"></span> {{ site.harmony.name }}</a></h1>
+        <h2 class="nocount">{{ site.harmony.description }}</h2>
+        {% include header-links.html %}                
+    </div>
+</header>
+
 <div id="home" class="page-content wc-container">
 
 	<div class="posts leading">
@@ -15,8 +24,8 @@ layout: default
     			<span class="post-date">{{ post.date | date_to_string }}</span>    			
   				<p>
 	  				{{ post.description }}	
-  					<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title}}">
-  						>>&nbsp;czytaj&nbsp;dalej
+  					<a class="button" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title}}">
+  						czytaj&nbsp;dalej
 					</a>
   				</p>
   			</div>
