@@ -561,8 +561,9 @@ body.theme-base-01 {
   
   header.small {
     padding: 0;
-    border-bottom: 1px #888 solid;
-
+    background: rgba(242,242,242,.9);
+    border-top: 0;
+    
     @include MQ(M) {
         position: fixed;
         width: 100%;
@@ -743,10 +744,9 @@ div.posts {
 div.post {
   padding-top: .5em;
   padding-bottom: 1em;
-  border-bottom: 1px $base-05 solid;
   text-align: justify;
-  @include MQ(M) {
 
+  @include MQ(M) {
     padding-bottom: 2em;  
   }
 }
