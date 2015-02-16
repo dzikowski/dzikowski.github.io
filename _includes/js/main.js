@@ -49,6 +49,18 @@ jQuery(document).ready(function($){
     
     // replace all
     traverse(document.body);
-
+    
+    // tags highlight
+    $('.tag').hover(function(){
+        var tag = $(this).html();
+        $('.tag').each(function(){
+            if ($(this).html() === tag) {
+                $(this).addClass(tag+'-hover');
+            }
+        });
+    }, function(){
+        var tag = $(this).html();
+        $('.tag').removeClass(tag+'-hover')
+    });
     
 });

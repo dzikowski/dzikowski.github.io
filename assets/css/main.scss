@@ -942,3 +942,34 @@ nav .scroll-nav__heading {
   }
 }
 
+/* ---- TAGS -----------*/
+.tag {
+    margin-right: .5em;
+    padding: 0 .5em;
+    display: inline-block;
+    border-radius: .5em;
+    font-size: .8em;
+    cursor: pointer;
+    transition: .5s;
+    background: #eee;
+}
+
+.bigdata-hover {
+    background-color: #e8d;
+    color: #fff;
+}
+
+.tutorial-hover {
+    background-color: #7b5;
+    color: #fff;
+}
+
+.opinie-hover {
+    background-color: #98f;
+    color: #fff;
+}
+
+.metodyka-hover {
+    background-color: #fb5;
+    color: #fff;
+}

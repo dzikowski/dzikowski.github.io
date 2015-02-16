@@ -1,6 +1,9 @@
 ---
 title: Mój pierwszy projekt na Github
 layout: post
+tags: 
+- metodyka
+- opinie
 description: |
     Konto na Github założyłem wcale nie tak dawno temu, bo w sierpniu 2013 roku.
     Mój <a href="https://github.com/dzikowski/publish-url/blob/master/publish-url">pierwszy projekt</a> Open Source powstał miesiąc później, dla żartu, i składał się z dwóch linijek kodu w Bashu.

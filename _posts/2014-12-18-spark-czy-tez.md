@@ -1,6 +1,9 @@
 ---
 title: Spark a Tez
 layout: post
+tags: 
+- bigdata
+- opinie
 description: |
     Apache Tez jest wspaniałym, nowym narzędziem, pozwalającym na znaczne przyspieszenie wykonywania operacji w środowisku Hadoop.
     Jest stosunkowo mocno forsowany przez jednego z liderów rozwiązań big data, firmę Hortonworks.

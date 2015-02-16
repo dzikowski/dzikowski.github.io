@@ -9,7 +9,12 @@ layout: default
 	
 	<div class="post reading">
 		<h1>{{ page.title }}</h1>
-		<span class="post-date">{{ page.date | date_to_string }}</span>
+		<span class="post-date">
+		    <span class="tag tag-date">{{ page.date | date_to_string }}</span>
+		    {% for tag in page.tags %}
+        		<span class="tag {{ tag }}">{{ tag }}</span>
+            {% endfor %}
+        </span>
         <div class="post-lead">
             <p>{{ page.description }}</p>
         </div>
