@@ -53,7 +53,7 @@ Choć samo spotkanie było ciekawe i sporo można się było nauczyć, to wszyst
 
 W Krakowie znajduje się całkiem spory oddział firmy [Base](https://getbase.com/) z Paolo Alto.
 Ponieważ w najbliższym czasie z Krakowa ma się wyprowadzić Google, Base postanowiło przejąć wizerunek firmy innowacyjnej i przyjaznej programistom.
-Powstała inicjatywa [Tech Space](http://www.gototech.space/), w ramach której Base przeznaczyło niemal cały parter swojego budynku na spotkania developerów.
+Powstała inicjatywa [Tech Space](http://www.gototech.space/), w ramach której firma przeznaczyła niemal cały parter swojego budynku na spotkania developerów.
 Piwo i pizza sponsorowane przez Base.
 
 Obejrzyj sobie na Facebooku [zdjęcia](https://www.facebook.com/media/set/?set=a.584274025049103.1073741832.555756434567529&type=1) z warsztatów i zobacz, jak fajnie zostało zorganizowane to miejsce.
