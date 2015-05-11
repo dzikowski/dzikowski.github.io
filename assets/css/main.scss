@@ -563,7 +563,6 @@ body.theme-base-01 {
   
   header.small {
     padding: 0;
-    background: rgba(242,242,242,.9);
     border-top: 0;
     
     @include MQ(M) {
@@ -935,12 +934,13 @@ nav .scroll-nav__heading {
   @media screen and (min-width: 1140px) {
     position: absolute;
     right: -5em;
-    top: 8em;
+    top: 1em;
     background: #fff;
     width: 22%;
     min-height: 320px;
     border: 0;
-    border-left: 1px solid $base-05;
+    border-left: 1px solid #ddd;
+    padding-top: 2em;
   }
 }
 
