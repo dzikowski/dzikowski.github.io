@@ -14,12 +14,12 @@ url: http://dzikowski.github.io
 harmony:
   name: dzikowski.github.io
   # Little description about your site
-  description: Piszę głównie o Kafce, Storm, Spark, Scalding, MapReduce i innych technologiach big data.
-  meta_description: Piszę głównie o Kafce, Storm, Spark, Scalding, MapReduce i innych technologiach big data.
+  description: Wyzwania, które napotykam na drodze zawodowej. Technologie, tutoriale, linki. Wydarzenia i opinie.
+  meta_description: Wyzwania, które napotykam na drodze zawodowej. Technologie, tutoriale, linki. Wydarzenia i opinie.
   basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
   author: # Author details
     name: Jakub Dzikowski
-    email: jakub.t.dzikowski@gmail.com
+    email: jakub@bezspacji.pl
     url: http://dzikowski.github.io
 
   # Google Analytics key, leave blank to ignore
