@@ -556,7 +556,7 @@ body.theme-base-01 {
       height: 204px;
       width: 204px;
       display: block;
-      margin: 0 1em;
+      margin-right: 1em;
       @include MQ(M) { float: left; }
     }
   }

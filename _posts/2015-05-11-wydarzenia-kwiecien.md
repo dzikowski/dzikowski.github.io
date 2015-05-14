@@ -4,7 +4,7 @@ layout: post
 tags: 
 description: |
     Od ponad miesiąca przebywam na kontrakcie w Krakowie, dzięki czemu miałem okazję liznąć tamtejszego środowiska IT.
-    Byłem na kilku bardzo ciekawych spotkaniach branżowych, a&nbsp;w&nbsp;międzyczasie odwiedziem jeszcze konferencję Scalar w Warszawie.
+    Byłem na kilku bardzo ciekawych spotkaniach branżowych, a&nbsp;w&nbsp;międzyczasie odwiedziłem jeszcze konferencję Scalar w Warszawie.
     Innymi słowy: trochę się działo.
 ---
 
