@@ -43,6 +43,7 @@ Czyli może dojść do sytuacji, kiedy mamy aplikację ???
 Na obrazku mężczyzna być może poczeka, aż kobieta włoży do zmywarki część naczyń (aż skończy wykonywać sekwencję działań), a potem się zamienią.
 Jednak ciągle nie mogą wykonywać tych czynności równocześnie.
 
+http://www.danielmoth.com/Blog/threadingconcurrency-vs-parallelism.aspx
 
 ### Parallelism
 
