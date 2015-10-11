@@ -33,7 +33,7 @@ Mamy już kilka wątków, czyli spełniamy definicję wielowątkowości.
 A że jeden czeka i nie może dopchać się do procesu zmywania naczyń?
 Zatrzymajmy się na chwilę.
 
-Taka sytuacja może mieć miejsce, kiedy mamy tylko jeden procesor.
+Taka sytuacja może mieć miejsce, kiedy mamy tylko jeden procesor, albo kiedy nie do końca dobrze zaprojektowaliśmy aplikację.
 Może być jednocześnie obsługiwanych wiele wątków, ale tylko jeden w danym czasie faktycznie coś robi.
 Czyli może dojść do sytuacji, kiedy mamy aplikację, która jest wielowątkowa, ale nieefektywnie korzysta z wielu wątków.
 Pomyśleliśmy o wielowątkowości (_multithreading_), ale nie pomyśleliśmy o zrównolegleniu operacji (_parallelism_).
@@ -75,19 +75,7 @@ Dla porządku poniżej wrzucam linki do poszczególnych pojęć i prezentującyc
  6. [Data Parallelism](https://en.wikipedia.org/wiki/Data_parallelism) -- [Andrzej Brożek](http://www.craftinity.com/)
  7. [Lambda Architecture](http://www.meetup.com/sc-krk/events/217640382/) -- [Norbert Wójtowicz](https://twitter.com/pithyless)
 
-Prezentacje są raczej w kolejności, jak się pojawiały, nie jestem tylko pewien czwórki i piątki, być może były odwrotnie.
-
-
-## (dygresja osobista) 
-
-Kiedy po raz pierwszy, w sumie już jakieś 6-7 lat temu, zetknąłem się z tym modelem programowania współbieżnego, zapragnąłem nauczyć się Erlanga. Jeszcze jako student, przeładowany byłem nie do końca zrozumiałymi pojęciami wątków, muteksów i tym podobnych. Kiedy dowiedziałem się o lekkich wątkach i przesyłaniu komunikatów, zamiast synchronizacji wątków, doznałem obiawienia.
-
-W zasadzie od tego zaczęła się moja historia ze Scalą. Kilka miesięcy potem zrobiłem pierwszy eksperyment, porównujący dwie technologie. Wyświetlałem na standardowym wyjściu komunikaty pochodzące z różnych wątków, takie rozproszone Hello World. W Javie to były chyba trzy klasy i ponad dwieście linijek kodu. W Scali -- czterdzieści osiem linijek. (Sprawdziłem na Wikipedii: pierwsza wersja Akka wyszła w lipcu 2009, więc pewnie wydarzyło się to wszystko jakoś w 2010 roku).
-
-Po dwóch latach, kiedy w zasadzie nie miałem ze Scalą kontaktu, zrobiłem na Courserze Functional Programming Principles in Scala, które diametralnie zmieniłem podejście do programowania. Jakiś czas później skończyłem Reactive Programming, który był częsciowo poświęcony Akka, potem byłem już na prezentacjach z Akka kilka razy, raz nawet prowadzonej przez samego Jonas Bonéra, kiedy przygotowywał się przed Geekonem w Krakowie, więc trudno powiedzieć, żebym dowiedział się czegoś nowego.
-
-Niemniej jednak podobała mi się prezentacja o Aktorach.
-Marcin Piotr Miszczyk pokazywał proste programiki w Erlangu i opowiadał o zaletach korzystania z tego modelu współbieżności.
+Prezentacje są raczej w kolejności, w jakiej się pojawiały, nie jestem tylko pewien czwórki i piątki, być może były odwrotnie.
 
 
 ## Actor model
@@ -124,8 +112,20 @@ Czyli przekładając to na język aktorów: ```K``` przyjmuje zdarzenia ```t_br`
 ```M``` przyjmuje zdarzenia ```t_wo``` i je przetwarza.
 
 Oczywiście poprzedni przykład (kiedy mężczyzna czeka) też można opisać na modelu aktorowym.
-Znów mamy dwóch aktorów, ```K``` i ```M```, i mamy też zdarzenia ```t_br```, które każdy z aktorów może przeprowadzić "do końca".
-Więcej, a w zasadzie wszystko, dzieje się "wewnątrz" aktorów.
+Znów mamy dwóch aktorów, ```K``` i ```M```, i mamy też zdarzenia ```t_br```, które każdy z aktorów może przeprowadzić _do końca_.
+Więcej, a w zasadzie wszystko, dzieje się _wewnątrz_ aktorów.
+
+
+## (dygresja osobista) 
+
+Kiedy po raz pierwszy, w sumie już jakieś 6-7 lat temu, zetknąłem się z modelem aktorowym programowania współbieżnego, zapragnąłem nauczyć się Erlanga. Jeszcze jako student, przeładowany byłem nie do końca zrozumiałymi pojęciami wątków, muteksów i tym podobnych. Kiedy dowiedziałem się o lekkich wątkach i przesyłaniu komunikatów, zamiast synchronizacji wątków, doznałem obiawienia.
+
+W zasadzie od tego zaczęła się moja historia ze Scalą. Kilka miesięcy potem zrobiłem pierwszy eksperyment, porównujący dwie technologie. Wyświetlałem na standardowym wyjściu komunikaty pochodzące z różnych wątków, takie rozproszone Hello World. W Javie to były chyba trzy klasy i ponad dwieście linijek kodu. W Scali -- czterdzieści osiem linijek. (Sprawdziłem na Wikipedii: pierwsza wersja Akka wyszła w lipcu 2009, więc pewnie wydarzyło się to wszystko jakoś w 2010 roku).
+
+Po dwóch latach, kiedy w zasadzie nie miałem ze Scalą kontaktu, zrobiłem na Courserze Functional Programming Principles in Scala, które diametralnie zmieniło moje podejście do programowania. Jakiś czas później skończyłem Reactive Programming, który był częsciowo poświęcony Akka, potem byłem już na prezentacjach z Akka kilka razy, raz nawet prowadzonej przez samego Jonas Bonéra, kiedy przygotowywał się przed Geekonem w Krakowie, więc trudno powiedzieć, żebym dowiedział się czegoś nowego.
+
+Niemniej jednak podobała mi się prezentacja o Aktorach.
+Marcin Piotr Miszczyk pokazywał proste programiki w Erlangu i opowiadał o zaletach korzystania z tego modelu współbieżności.
 
 
 ## To co z tą współbieżnością?
@@ -137,7 +137,7 @@ Wróćmy do przykładu z _fork join_:
 
 ![ForkJoin](http://downloads.typesafe.com/website/blog-images/06-fork-and-join.png)
 
-Dla tego przykładu możemy rozpatrywać współbieżność przede wszystkim w kontekście tego, co się stanie, kiedy jednocześnie mężczyzna i kobieta będą chcieli włożyć naczynia do zmywarki?
+Dla tego przykładu możemy rozpatrywać współbieżność przede wszystkim w kontekście tego, co się stanie, kiedy jednocześnie mężczyzna i kobieta będą chcieli włożyć naczynia do zmywarki.
 To jest potencjalne miejsce konfliktu, kiedy dwa wątki potrzebują w tym samym czasie dostępu do tego samego zasobu.
 Dany system będzie współbieżny (przypominam: _concurrent_), kiedy będzie mógł sobie z taką sytuacją poradzić.
 
