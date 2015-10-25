@@ -3,9 +3,9 @@ title: Everyting Is Awesome!!!
 layout: post
 tags: 
 description: |
-    Ostatnio robię króciutki kurs na Udacity: <a href=”https://www.udacity.com/course/website-performance-optimization--ud884”>Website Performance Optimization</a>.
+    Ostatnio robię króciutki kurs na Udacity: <a href="https://www.udacity.com/course/website-performance-optimization--ud884">Website Performance Optimization</a>.
     Kurs sam w sobie jest bardzo fajny, naprawdę dobrze zrobiony, a przy okazji widać w nim humorystyczne zacięcie Google.
-    Dowód: <a href=”https://www.youtube.com/watch?v=StTqXEQ2l-Y”>piosenka</a> z Lego w roli głównej.
+    Dowód: <a href="https://www.youtube.com/watch?v=StTqXEQ2l-Y">piosenka</a> z Lego w roli głównej.
 ---
 
 
