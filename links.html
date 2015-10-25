@@ -1,0 +1,37 @@
+---
+layout: default
+title: Przegląd linków
+---
+
+{% include small-menu.html %} 
+
+<div class="page-content wc-container">
+  <div class="reading">&nbsp;</div>
+  
+  <h1>{{ page.title }}</h1>
+  
+  <p>Jestem zapisany na kilka list mailingowych, często zaglądam na Hacker News i dużo rzeczy szukam w sieci, a czasem i jakiś znajomy coś podeśle. Od kwietnia notuję sobie linki, które uważam za ciekawe: coś, co przydaje mi się w programowaniu, coś o tym, jak zwiększyć produktywność pracy, tego typu rzeczy. Myślę, że od tego czasu zebrało się już tego całkiem sporo. Całkiem sporo wartościowej wiedzy. Myślę też, że warto w związku z tym jeszcze bardziej przesiać te linki (w tej chwili mam pewnie tak ok. 25 do 50 miesięcznie), może jakoś sensownie skategoryzować i wrzucić na ten blog. Dlaczego? Może znajdziesz coś ciekawego, a może ja sam za jakiś czas z miłą nostalgią wrócę do starego wpisu z linkami i zobaczę, co wtedy mnie zainteresowało i czym się zajmowałem.</p>
+  <p>Linki układam w kilku kategoriach, które mnie szczególnie interesują:</p>
+  <ol>
+    <li><strong>Biznes</strong>, przedsiębiorczość, marketing, zarządzanie</li>
+    <li><strong>Rozwój osobisty</strong>, organizacja pracy, efektywność (też organizacyjna)</li>
+    <li><strong>DevOps</strong></li>
+    <li><strong>Architektura</strong>, rozwiązania i wzorce, dobre praktyki</li>
+    <li><strong>Programowanie</strong>, narzędzia, biblioteki, triki, praktyka programowania</li>
+    <li><strong>Ciekawostki</strong> ze świata IT, a może i nie tylko</li>
+  </ol>
+  <p>Myślę, że tyle na początek wystarczy. Poniżej znajdziesz listę dotychczas opublikowanych wpisów z tego działu. Publikuję je z datą końca miesiąca, w którym znalazłem dane linki, jednak nie ma co się oszukiwać, pewnie często wrzucał je będę po czasie.</p>
+  
+  
+  {% for post in site.posts  %}
+  	{% if post.category == "links" %}
+      	{% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
+      	{% if currentyear != year %}
+		    <h1>{{ currentyear }}</h1>
+		    {% capture year %}{{currentyear}}{% endcapture %} 
+	    {% endif %}
+        <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>: {{ post.description }}</p>
+	{% endif %}
+  {% endfor %}
+
+</div>
