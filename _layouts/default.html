@@ -8,13 +8,13 @@
         <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.harmony.meta_description }}{% endif %}">
         <link rel="canonical" 
         href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,300italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>            
         
-        <!-- Harmony styles -->
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/main.css">
 
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        
         
         <!-- Modernizr js -->
         <script async src="{{ site.baseurl }}/assets/js/modernizr.js"></script>    
@@ -36,22 +36,15 @@
 
         <footer class="main-footer">
             <div class="wc-container">
-                <div class="column one">
-                    {% include footer-links.html %}                    
-                </div>
-                <div class="column two">
-                    {% include social.html %}
+                <div class="reading">
+                    {% include footer.html %}     
                 </div>
             </div>
-            <p class="wc-container disclaimer">
-                {% include footer.html %}
-            </p>
         </footer>
         <script type="text/javascript">
           /* To avoid render blocking css */
           var cb = function() {
             var l = document.createElement('link'); l.rel = 'stylesheet';
-            //l.href = 'http://fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin';
             l.href = 'http://fonts.googleapis.com/css?family=Ubuntu&subset=latin';
             var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
           };

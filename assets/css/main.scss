@@ -37,7 +37,7 @@ body {
     size: 100%;
     family: $primary-font; // variables inside partials > _variables.scss
   }
-  letter-spacing: 0.025em;
+  letter-spacing: 0.03em;
 }
 
 .wc-container {
@@ -224,8 +224,13 @@ header.main-header, footer.main-footer {
 }
 
 header.main-header {
+  
+  width: 85%;
+  max-width: $T;
+    
+  margin: 100px auto 0;
   color: $base-00;
-  border-top: 5px $base-00 solid;
+  border-top: 10px $base-03 solid;
   @extend .text-inset;
 
   a { 
@@ -238,6 +243,7 @@ header.main-header {
   ul {
     width: 100%;
     padding: 15px;
+    margin-top: 1em;
   }
   ul li {       
     display: inline-block;
@@ -263,8 +269,7 @@ header.main-header {
 }
 
 footer.main-footer {
-  background: url('../img/outlets.png');
-  color: $base-07;
+  color: $base-00;
   .column {
     float:left;
     @include column(1);
@@ -513,27 +518,16 @@ body.theme-base-01 {
   a {
     @extend .default-anchor;   
   }
-
-  footer.main-footer {
-    background-color: $base-01;
-    color: $base-07;
-  }
-
-  header.main-header {
+.main-header {
     
     color: #272935;
-    background: url("/assets/img/rockywall.png");
-    border-bottom: 1px solid #e6e1dc;
-    background-attachment: fixed;
-    padding: 6em 0;
     
     h1 {
-      color: $base-0B;
       font-size: 2.4em;
       font-weight: bold;
       border: 0;
       margin: 0;
-      @include MQ(M) { font-size: 4em; }
+      @include MQ(M) { font-size: 2em; }
     }
     h2 {
       font-size: 1.4em;
@@ -550,14 +544,18 @@ body.theme-base-01 {
     }
     #face {
       background: url('/assets/img/face.png');
+      background-size: 110%;
       background-position: center center;
-      border-radius: .1em;
-      border: 2px $base-05 solid;
-      height: 204px;
-      width: 204px;
+      border-radius: 10em;
+      border: 7px #ffffff solid;
+      height: 130px;
+      width: 130px;
       display: block;
       margin-right: 1em;
       @include MQ(M) { float: left; }
+    }
+    .wc-container {
+        margin-top: -80px;
     }
   }
   
@@ -736,8 +734,7 @@ div.posts {
 }
 @include MQ(M) {
     .reading {
-        width: 80%;
-        margin-top: 6em;
+        width: 75%;
     }
 }
 
@@ -930,16 +927,14 @@ nav .scroll-nav__heading {
 
 #navbar nav {
   padding-top: 15px;
-  border: 1px solid $base-05;
   @media screen and (min-width: 1140px) {
     position: absolute;
-    right: -5em;
-    top: 1em;
+    right: 0;
+    top: 0;
     background: #fff;
     width: 22%;
     min-height: 320px;
     border: 0;
-    border-left: 1px solid #ddd;
     padding-top: 2em;
   }
 }
@@ -974,4 +969,8 @@ nav .scroll-nav__heading {
 .metodyka-hover {
     background-color: #fb5;
     color: #fff;
+}
+
+.copyright {
+    font-size: 75% !important;
 }

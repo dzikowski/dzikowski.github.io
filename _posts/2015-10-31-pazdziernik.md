@@ -70,6 +70,6 @@ Ciekawostki
 
 Dlaczego NSA udaje się złamać kryptografię tak wielu systemów? Okazuje się, że dlatego, że kiedy znajdą już dużą liczbę pierwszą, to może ona posłużyć do złamania szyfrów nie na jednym, ale na wielu portalach. Jak wielu? Zajrzyjcie do artykułu [How is NSA breaking so much crypto?](https://freedom-to-tinker.com/blog/haldermanheninger/how-is-nsa-breaking-so-much-crypto/).
 
-https://www.google.com/doodles/halloween-global-candy-cup-2015
+<!--https://www.google.com/doodles/halloween-global-candy-cup-2015-->
 
 Najlepsze na koniec. Od hermetycznych żartów informatycznych śmieszniejsze są tylko żarty filozoficzne. [Tutaj](http://existentialcomics.com/comic/23) komiks, gdzie filozofowie akurat grają w _Dungeons and Dragons_, a pod komiksem znajdziecie ponad 600 słów tłumaczących, o co każdemu z nich chodziło. I chyba większość tych komiksów ma przycisk “Didn’t get the joke?”, który można kliknąć, by zobaczyć rozbudowane wytłumaczenie tego, co się właśnie wydarzyło.
