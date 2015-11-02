@@ -4,8 +4,6 @@ title: O mnie
 permalink: /about/
 ---
 
-O mnie
----
 
 Wytwarzaniem oprogramowania zajmuję się już ponad 7 lat, jednak ciągle robię to z pasją.
 Chętnie odwiedzam konferencje i spotkania branżowe, lubię się uczyć i stosować nowe technologie.
