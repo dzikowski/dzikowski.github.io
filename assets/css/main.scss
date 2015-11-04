@@ -583,7 +583,11 @@ body.theme-base-01 {
     h1, h2, h3, h4, h5, h6 { color: $base-01; }
   }
 
-
+  @include MQ(M) {
+    .mobile-share {
+        display: none;
+    }
+  }
 }
 
 /* --------------------------------
