@@ -518,7 +518,10 @@ body.theme-base-01 {
   a {
     @extend .default-anchor;   
   }
-.main-header {
+  
+  @include MQ(M) { border-left: 48px #ccc solid; }
+
+  .main-header {
     
     color: #272935;
     
@@ -527,7 +530,11 @@ body.theme-base-01 {
       font-weight: bold;
       border: 0;
       margin: 0;
-      @include MQ(M) { font-size: 2em; }
+      text-align: center;
+      @include MQ(S) {
+        font-size: 2em;
+        text-align: left;
+      }
     }
     h2 {
       font-size: 1.4em;
@@ -550,37 +557,26 @@ body.theme-base-01 {
       border: 7px #ffffff solid;
       height: 130px;
       width: 130px;
-      display: block;
-      margin-right: 1em;
-      @include MQ(M) { float: left; }
+      display: inline-block;
+      @include MQ(S) {
+        float: left; 
+        margin-right: 1em;
+      }
     }
-    .wc-container {
-        margin-top: -80px;
-    }
-  }
-  
-  header.small {
-    padding: 0;
-    border-top: 0;
     
-    @include MQ(M) {
-        position: fixed;
-        width: 100%;
-        z-index: 1;
-        box-shadow: 0px 0px 15px #fff;
+    #face:after {
+      content: "\A";
+      white-space: pre;
     }
-    * {
-        vertical-align: baseline;
+    
+    .wc-container {
+      margin: -80px auto 0;
+      width: 100%;
+      @include MQ(S) {
+        text-align: left;
+        width: 85%;
+      }
     }
-    h1 {
-      font-size: 1.8em;
-      display: inline-block;
-      margin-right: 3em;
-    }
-    ul { 
-      display: inline-block;
-      width: auto;
-    }  
   }
   
   div.page-content {
