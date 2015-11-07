@@ -22,6 +22,6 @@ Być może dlatego prowadzę bloga.
 
 &nbsp;
 
-Aha, mam na imię Kuba i możesz do mnie napisać na <a href="#" onclick=" var txt = '&#106;&#097;&#107;&#117;&#098;&#064;&#098;&#101;&#122;&#115;&#112;&#097;&#099;&#106;&#105;&#046;&#112;&#108;'; if (txt == this.innerHTML) window.open('mailto:'+txt); else this.innerHTML = txt; return false;">ten adres</a>.
+Aha, mam na imię Kuba i możesz do mnie pisać na <a href="#" onclick=" var txt = '&#106;&#097;&#107;&#117;&#098;&#064;&#098;&#101;&#122;&#115;&#112;&#097;&#099;&#106;&#105;&#046;&#112;&#108;'; if (txt == this.innerHTML) window.open('mailto:'+txt); else this.innerHTML = txt; return false;">ten adres</a>.
 
 
