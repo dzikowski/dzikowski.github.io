@@ -19,7 +19,7 @@ jQuery(document).ready(function($){
         fixedMargin: 40,
         scrollOffset: 100,
         animated: true,
-        speed: 500,
+        speed: 200,
         insertTarget: $('#navbar'),
         insertLocation: 'appendTo',
         arrowKeys: false,

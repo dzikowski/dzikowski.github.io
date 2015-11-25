@@ -7,7 +7,7 @@ layout: default
 <div id="home" class="page-content wc-container">
 
 	<div class="posts leading">
-  		{% for post in site.posts limit:6 %}
+  		{% for post in site.posts limit:10 %}
   			<div class="post">
     			<h3 class="post-title nocount">
 			      <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
@@ -15,10 +15,10 @@ layout: default
 			      </a>
     			</h3>
     			<span class="post-date">
-    			    <span class="tag tag-date">{{ post.date | date_to_string }}</span>
+    			    {{ post.date | date_to_string }}
                 </span>   			
   				<p>
-	  				{{ post.description }}	
+	  				{{ post.description }}
   					<a class="button" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title}}">
   						czytaj&nbsp;dalej
 					</a>

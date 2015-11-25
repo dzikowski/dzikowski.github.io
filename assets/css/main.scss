@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   // mobile first
-  @include font-size(20px);
+  @include font-size(24px);
   @include MQ(M) {
     @include font-size(36px);
   }
@@ -121,10 +121,10 @@ h6 {
 }
 
 p {
-  line-height: 1.75;
-  @include font-size(14px);
+  line-height: 1.5;
+  @include font-size(13px);
   @include MQ(M) {
-    @include font-size(16px);
+    @include font-size(15px);
   }
 }
 
@@ -139,11 +139,10 @@ a:active, a:hover, a:focus {
 a.button {
     font-size: 0.8em;
     color: #fff !important;
-    background-color: $base-08;
+    background-color: $base-02;
     padding: 0 .5em;
-    margin: 0 .5em;
     display: inline-block;
-    border-radius: .5em;
+    border-radius: 3px;
 }
 
 a.button:active, a.button:hover, a.button:focus {
@@ -211,7 +210,7 @@ a {
 }
 
 header.main-header, footer.main-footer {
-  p,address {
+  p, address, ul {
     @include font-size(12px);
     @include MQ(M) {
       @include font-size(14px);        
@@ -225,13 +224,11 @@ header.main-header, footer.main-footer {
 
 header.main-header {
   
-  width: 85%;
-  max-width: $T;
+  width: 94%;
     
   margin: 100px auto 0;
   color: $base-00;
-  border-top: 10px $base-03 solid;
-  @extend .text-inset;
+  border-top: 4px #8bca8b solid;
 
   a { 
     color: inherit;
@@ -242,13 +239,7 @@ header.main-header {
 
   ul {
     width: 100%;
-    padding: 15px;
     margin-top: 1em;
-  }
-  ul li {       
-    display: inline-block;
-    margin-right: 10px;
-    position:relative;
   }
 
   ul li span {
@@ -262,10 +253,17 @@ header.main-header {
     padding-bottom:5px;
     @extend .default-anchor;
     @include transition(all, 0.4s);
-    @include MQ(M) {
-      @include font-size(18px);
+  }
+  
+  p {
+    text-align: justify;
+  }
+  
+  @include MQ(L) {
+    .lead {
+      width: 75%;
     }
-  } 
+  }
 }
 
 footer.main-footer {
@@ -526,14 +524,12 @@ body.theme-base-01 {
     color: #272935;
     
     h1 {
-      font-size: 2.4em;
+      font-size: 1.5em;
       font-weight: bold;
       border: 0;
       margin: 0;
-      text-align: center;
       @include MQ(S) {
         font-size: 2em;
-        text-align: left;
       }
     }
     h2 {
@@ -542,6 +538,8 @@ body.theme-base-01 {
     }
     ul li { 
       color: #888;
+      display: inline-block;
+      margin-right: 1em;
     }
     ul li a { 
       color: #888;
@@ -550,7 +548,7 @@ body.theme-base-01 {
       }
     }
     #face {
-      background: url('/assets/img/face.png');
+      background: url('/assets/img/face.jpg');
       background-size: 110%;
       background-position: center center;
       border-radius: 10em;
@@ -558,10 +556,9 @@ body.theme-base-01 {
       height: 130px;
       width: 130px;
       display: inline-block;
-      @include MQ(S) {
-        float: left; 
-        margin-right: 1em;
-      }
+      float: left; 
+      margin-right: 1em;
+      margin-bottom: 1em;
     }
     
     #face:after {
@@ -570,13 +567,23 @@ body.theme-base-01 {
     }
     
     .wc-container {
-      margin: -80px auto 0;
-      width: 100%;
+      margin: -4em auto 0;
       @include MQ(S) {
         text-align: left;
-        width: 85%;
+      }
+      @include MQ(M) {
+        width: 100%;
+        margin: -5em auto 0;
       }
     }
+    
+    .lead {
+      clear: both;
+      @include MQ(S) {
+        clear: none;
+      }
+    }
+
   }
   
   div.page-content {
@@ -729,10 +736,10 @@ div.posts {
         padding: 0 2em;
         margin-right: -5px;
         vertical-align: top;
-        height: 420px;
+        height: 320px;
     }
 }
-@include MQ(M) {
+@include MQ(L) {
     .reading {
         width: 75%;
     }
@@ -750,15 +757,15 @@ div.post {
 }
 span.post-date {
   line-height: 1.6;
-  letter-spacing: 2px;
   text-transform: uppercase;
-  @include font-size(12px);
+  @include font-size(10px);
   overflow: hidden;
   display: block;
-  padding: 1em 0;
+  padding: 0.5em 0;
+  color: $base-02;
 
   @include MQ(M) {
-    @include font-size(16px);
+    @include font-size(14px);
   }
 }
 
@@ -918,16 +925,16 @@ nav .scroll-nav__heading {
 }
 
 #navbar {
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: $L) {
     position: fixed;
     height: 0px;
-    width: 960px;
+    width: $T;
   }
 }
 
 #navbar nav {
   padding-top: 15px;
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: $L) {
     position: absolute;
     right: 0;
     top: 0;
