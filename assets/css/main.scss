@@ -419,7 +419,7 @@ div.page-content {
   ul {       
     padding: 0 0 1em 0;
     li {
-      @include font-size(14px);
+      @include font-size(13px);
       color: $color-2; 
       line-height: 1.6;
       background: url(./images/bullet.svg);
@@ -430,14 +430,14 @@ div.page-content {
     }
     @include MQ(M){        
       li {         
-        @include font-size(16px);  
+        @include font-size(15px);  
         line-height: 1.5;
         background-position: 0 7px; 
       }
     }
   }
   ol { 
-    @include font-size(12px);
+    @include font-size(13px);
     // padding-top: 1em;
     padding-bottom: 1em;
     list-style: decimal;
@@ -450,7 +450,7 @@ div.page-content {
       position:relative;
     }
     @include MQ(M){
-      @include font-size(16px);
+      @include font-size(15px);
       li { 
         line-height: 1.5;
         background-position: 0 7px; 
@@ -728,15 +728,23 @@ div.posts {
 
 @include MQ(L) {
     .leading {
-        margin-left: -2em;
-    }
-    .leading .post {
-        display: inline-block;
-        width: 50%;
-        padding: 0 2em;
-        margin-right: -5px;
-        vertical-align: top;
-        height: 320px;
+        h2 {
+            font-size: 1.3em;
+        }
+        .post-date {
+            font-size: .75em;
+        }
+        .post {
+            display: block;
+            width: 46%;
+            height: 320px;
+        }
+        .post:nth-child(2n+1) {
+            float: left;
+        }
+        .post:nth-child(2n) {
+            float: right;
+        }
     }
 }
 @include MQ(L) {

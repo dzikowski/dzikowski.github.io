@@ -6,14 +6,14 @@ layout: default
 
 <div id="home" class="page-content wc-container">
 
-	<div class="posts leading">
+	<div class="posts reading leading">
   		{% for post in site.posts limit:10 %}
   			<div class="post">
-    			<h3 class="post-title nocount">
+    			<h2 class="post-title nocount">
 			      <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
 			        {{ post.title }}
 			      </a>
-    			</h3>
+    			</h2>
     			<span class="post-date">
     			    {{ post.date | date_to_string }}
                 </span>   			
@@ -25,8 +25,8 @@ layout: default
   				</p>
   			</div>
   		{% endfor %}
-	</div>
-	<div class="post-footer">
-		<div class="column-full"><a href="{{ '/archive' | prepend: site.baseurl | prepend: site.url }}">Zobacz starsze wpisy</a></div>
+	    <div class="post-footer">
+		    <div class="column-full"><a href="{{ '/archive' | prepend: site.baseurl | prepend: site.url }}">Zobacz starsze wpisy</a></div>
+	    </div>
 	</div>
 </div>

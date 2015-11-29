@@ -27,7 +27,7 @@ title: Przegląd linków
       {% if post.category == "links" %}
 	    {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
 	    {% if currentyear != year %}
-      <h1>{{ currentyear }}</h1>
+      <h2 class="nocount">{{ currentyear }}</h2>
       {% capture year %}{{currentyear}}{% endcapture %} 
         {% endif %}
         <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>: {{ post.description }}</p>
