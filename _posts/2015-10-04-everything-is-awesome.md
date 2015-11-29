@@ -1,5 +1,5 @@
 ---
-title: Everyting Is Awesome!!!
+title: Everything Is Awesome!!!
 layout: post
 tags: 
 description: |
