@@ -14,8 +14,8 @@ url: http://dzikowski.github.io
 harmony:
   name: dzikowski.github.io
   # Little description about your site
-  description: Wyzwania, które napotykam na drodze zawodowej. Technologie, tutoriale, linki. Wydarzenia i opinie.
-  meta_description: Wyzwania, które napotykam na drodze zawodowej. Technologie, tutoriale, linki. Wydarzenia i opinie.
+  description: Piszę o IT po polsku, więc z góry przepraszam za zagęszczenie kolokwializmów, ale co w angielskim brzmi naturalnie, w polskim często nie ma nawet odpowiedników.
+  meta_description: Piszę o IT po polsku, więc z góry przepraszam za zagęszczenie kolokwializmów, ale co w angielskim brzmi naturalnie, w polskim często nie ma nawet odpowiedników.
   basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
   author: # Author details
     name: Jakub Dzikowski
@@ -40,7 +40,7 @@ harmony:
 
 # Conversion / Build settings 
 markdown:    kramdown
-highlighter: pygments # this is how you put pygments config in jekyll 2.0 instead of pygments: true
+highlighter: rouge
 
 # Permalinks
 permalink:        pretty
