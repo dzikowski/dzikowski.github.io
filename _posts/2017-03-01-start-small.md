@@ -1,6 +1,7 @@
 ---
 title: Start small
 layout: post
+comments: true
 tags: 
 category: daj-sie-poznac
 description: |

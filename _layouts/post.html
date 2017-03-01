@@ -1,56 +1,60 @@
 ---
 layout: default
 ---
-{% include small-menu.html %} 
+{% include small-menu.html %}
 
 <div class="page-content wc-container">
-	
-	<div id="navbar"></div>
-	
-	<div class="post reading">
-		<h1>{{ page.title }}</h1>
-		<span class="post-date">
+
+  <div id="navbar"></div>
+
+  <div class="post reading">
+    <h1>{{ page.title }}</h1>
+    <span class="post-date">
 		    {{ page.date | date_to_string }}
         </span>
-        <div class="post-lead">
-            <p>{{ page.description }}</p>
-        </div>
-		<div class="post">
-			{{ content }}
-		</div>
+    <div class="post-lead">
+      <p>{{ page.description }}</p>
+    </div>
+    <div class="post">
+      {{ content }}
+    </div>
 
-	    {% if site.related_posts %}
-	    <div class="related">
-		    <h4>Powiązane wpisy</h2>
-		    <ul class="posts">
-		        {% for post in site.related_posts limit:3 %}
-		        <li>
-			      <span>{{ post.date | date_to_string }} &raquo;</span>
-			      <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
-		        </li>
-		        {% endfor %}
-		    </ul>
-	    </div>
-	    {% endif %}
+    <div class="post-footer">
+      <div class="column-1">
+        {% if page.previous %}
+        <a href="{{page.previous.url | prepend: site.baseurl | prepend: site.url }}"><< Starszy</a>
+        {% else %}
+        <span><< Starszy</span>
+        {% endif %}
+      </div>
+      <div class="column-2"><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }} ">Home</a></div>
+      <div class="column-3">
+        {% if page.next %}
+        <a href="{{ page.next.url | prepend: site.baseurl | prepend: site.url }}">Nowszy >></a>
+        {% else %}
+        <span>Nowszy >></span>
+        {% endif %}
+      </div>
+    </div>
 
-	    <div class="post-footer">
-		    <div class="column-1">
-			    {% if page.previous %}
-				    <a href="{{page.previous.url | prepend: site.baseurl | prepend: site.url }}"><< Starszy</a>
-			    {% else %}
-				    <span><< Starszy</span>
-			    {% endif %}
-		    </div>
-		    <div class="column-2"><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }} ">Home</a></div>
-		    <div class="column-3">
-			    {% if page.next %}
-				    <a href="{{ page.next.url | prepend: site.baseurl | prepend: site.url }}">Nowszy >></a>
-			    {% else %}
-				    <span>Nowszy >></span>
-			    {% endif %}
-		    </div>
-	    </div>
-	</div>
+    {% if page.comments %}
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://dzikowski.github.io';
+        this.page.identifier = 'dzikowski-github-io';
+      };
+      (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//dzikowski-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    {% endif %}
+
+  </div>
 </div>
  
 
