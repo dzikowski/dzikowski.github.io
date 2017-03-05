@@ -13,7 +13,7 @@ description: |
   A więc jestem i zobaczymy, co będzie.
 ---
 
-Konkurs [Daj Się Poznać](dajsiepoznac.pl) to jednak nie tylko pisanie bloga.
+Konkurs [Daj Się Poznać](http://dajsiepoznac.pl) to jednak nie tylko pisanie bloga.
 To pisanie dwóch postów tygodniowo, z czego przynajmniej jeden jest o rozwijanym projekcie Open Source.
 Czyli, podkreślam, jednocześnie należy rozwijać jakiś projekt Open Source.
  
