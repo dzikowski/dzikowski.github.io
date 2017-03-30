@@ -41,8 +41,9 @@ layout: default
     <div id="disqus_thread"></div>
     <script>
       var disqus_config = function () {
-        this.page.url = 'https://dzikowski.github.io';
-        this.page.identifier = 'dzikowski-github-io';
+        this.page.url = 'https://dzikowski.github.io/{{ page.url }}';
+        this.page.identifier = '{{ page.url }}';
+        this.page.title = '{{ page.title }}';
       };
       (function () {
         var d = document, s = d.createElement('script');
