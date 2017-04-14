@@ -1,10 +1,10 @@
 ---
-title: Cognito&#58; rejestracja i logowanie
+title: CI na GitHubie
 layout: post
 comments: true
 tags: 
 category: daj-sie-poznac
-description: Kolejnym krokiem w rozwoju <a href="https://github.com/withspace/serverless-webapp-starter">startera</a>, skoro są już podstawowe mocki, skoro wiadomo już jak działa React Router i jak składa się komponenty w React Toolbox, jest zamockowanie komponentów, pozwalających obsłużyć proces rejestracji i logowania użytkownika w Amazon Cognito.
+description: 
 ---
 
 ![cognito-schemat](/assets/img/posts/cognito-schemat.png)
