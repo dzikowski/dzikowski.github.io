@@ -242,3 +242,29 @@ const Routes = (props) => (
 I tyle.
 Teraz użytkownik może się zalogować i wejść na `/profile`, a po wylogowaniu zostanie automatycznie przekierowany do `/`.
 Wszystko działa tak jak powinno.
+
+
+## Update 2017.04.14
+
+Tak jak napisał **Bubu**, aktualizację stanu można napisać dużo krócej niż z wykorzystaniem `Object.assign`, posługując się _spread operatorem_.
+W sumie będzie to tak krótko, że nie trzeba już trzymać tego w osobnej funkcji &#128521;
+
+Zaktualizowany kawałek komponentu:
+
+```javascript
+class App extends Component {
+
+  auth = new Auth(user => {
+    console.log('Update user', user);
+    this.setState({...this.state, user});
+  });
+
+  state = {
+    user: {
+      signedIn: false
+    }
+  };
+
+  render() { ... }
+}
+```
