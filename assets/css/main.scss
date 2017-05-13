@@ -991,11 +991,19 @@ nav .scroll-nav__heading {
 }
 
 
-
-
 #google_translate_element {
     float: right;
     img {
         display: inline-block;
     }
+}
+
+.info-box {
+  background-color: rgba($base-0B, .05) !important;
+  border: 1px solid rgba($base-0B, .1);
+  color: $base-0B;
+  font-weight: bold;
+  padding: 1.5em 2em;
+  margin-top: 3em !important;
+  margin-bottom: 3em !important;
 }
