@@ -93,3 +93,8 @@ Trzeba było używać Shrinkwrapa od samego początku.
 ---
 
 Jeśli chcesz poczytać więcej o Shrinkwrapie, to został całkiem fajnie opisany [tutaj](https://medium.com/front-end-hacking/conquering-npm-shrinkwrap-in-laymans-terms-afa302b3363).
+
+---
+
+Trochę później przestawiłem się na [Yarn](https://yarnpkg.com/lang/en/).
+Możesz przeczytać o tym [tutaj](http://dzikowski.github.io/daj-sie-poznac/2017/05/25/yarn/).
