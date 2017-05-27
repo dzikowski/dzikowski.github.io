@@ -130,10 +130,10 @@ Zobacz, jak zaczyna się ten plik:
   --color-background: var(--color-white);
 ```
 
-Tutaj od razu przyznam, że na tym się za dużo nie znam, więc to, co zaraz przeczytasz, to to, jak jak rozumiem to zagadnienie -- i mam nadzieję, że nie mijam się z prawdą.
+Tutaj od razu przyznam, że na tym się za dużo nie znam, więc to, co zaraz przeczytasz, to to, jak ja rozumiem to zagadnienie -- i mam nadzieję, że nie mijam się z prawdą.
 
 No więc mamy coś takiego, co nazywa się moduły CSS (_CSS Modules_), które pozwalają nam ograniczyć _scope_ danych styli (tak jak pisałem już [tutaj](http://dzikowski.github.io/daj-sie-poznac/2017/04/07/react-toolbox/)).
-Wygląda na to, że w `:root` definiowane są zmienne CSS dostępne globalnie na poziomie danego modułu (zob. też. przykład [tutaj](https://github.com/postcss/postcss-custom-properties)).
+Wygląda na to, że w `:root` definiowane są zmienne CSS dostępne globalnie na poziomie danego modułu (zob. też przykład [tutaj](https://github.com/postcss/postcss-custom-properties)).
 W _zwykłym_ CSS taka składnia jest jednak niedopuszczalna, ponieważ `:root` to tylko [pseudoklasa](https://developer.mozilla.org/pl/docs/Web/CSS/:root), która musi występować po selektorze (tak jak np. `:hover`, czy `:after`).
 Stąd taki błąd w konsoli.
 
@@ -142,7 +142,7 @@ Rozwiązania tego problemu są dwa:
 1. Odpalać testy bez CSS (albo precyzyjniej: na zamockowanym, _pustym_ CSS).
 1. Przed wywołaniem testów przeprocesować pliki CSS, żeby pasowały do standardowej specyfikacji.
 
-Próbowałem podejścia pierwszego, ale to, co było opisane w [dokumentacji Jest](https://facebook.github.io/jest/docs/en/webpack.html)) nie rozwiązało problemu, więc ostatecznie poszedłem na skróty i skorzystałem z pierwszego rozwiązania ([ta sekcja](https://facebook.github.io/jest/docs/webpack.html#handling-static-assets) dokumentacji).
+Próbowałem podejścia drugiego, ale to, co było opisane w [dokumentacji Jest](https://facebook.github.io/jest/docs/en/webpack.html)) nie rozwiązało problemu, więc ostatecznie poszedłem na skróty i skorzystałem z pierwszego rozwiązania ([ta sekcja](https://facebook.github.io/jest/docs/webpack.html#handling-static-assets) dokumentacji).
 Wadą tego rozwiązania jest to, że w snapshotach nazwy klas będą brzmiały `undefined`.
 
 Aby zamockować pliki CSS (a także inne pliki), należy dodać w `package.json` konfigurację Jest.
@@ -183,7 +183,7 @@ Ewidentnie brakuje zmiennej, która jest brana ze zmiennych środowiskowych.
 Nie mamy jednak w terminalu własnego błędu, który powinien wyskoczyć, kiedy Webpack Define Plugin nie znajdzie zmiennej środowiskowej, bo przecież Jest nie korzysta z Webpacka (a tym samym nie zadziała dodanie zmiennej środowiskowej w terminalu).
 Błąd pojawia się w pliku `cognitoConfig.js`, kiedy chcemy odczytać wartość zmiennej globalnej.
 
-Żeby rozwiązać ten problem, wystarczy postępować zgodnie z [tym wątkiem](https://stackoverflow.com/questions/38060295/jest-global-variable-example), czyli po prostu dodać odpowiednie zmienne globalne do konfiguracji Jest w pliku `package.json`;
+Żeby rozwiązać problem, wystarczy postępować zgodnie z [tym wątkiem](https://stackoverflow.com/questions/38060295/jest-global-variable-example), czyli po prostu dodać odpowiednie zmienne globalne do konfiguracji Jest w pliku `package.json`;
 
 ```javascript
   "jest": {
@@ -313,10 +313,10 @@ I stało się, po raz pierwszy w projekcie build na Travisie zakończył się na
 Zanim jednak zaczniemy świętować, trzeba będzie jeszcze napisać testy dla pozostałych komponentów, a także dla usługi do autoryzacji, gdzie nie będą to już testy snapshotowe, gdzie będzie to trzeba zrobić bardziej konwencjonalnie.
 
 Testy snapshotowe wydają mi się ciekawym rozwiązaniem, ale jeszcze nie przekonałem się do nich do końca.
-Wyobrażam sobie, że łatwo wpaść w pułapkę i obejmować tymi testami zbyt duży kawałek aplikacji, nieodizolowany od reszty.
-W takich sytuacjach pewnie co chwilę trzeba uaktualniaś snapshoty, a to przecież mija się z celem.
+Wyobrażam sobie, że łatwo wpaść w pułapkę i obejmować tymi testami zbyt duży kawałek aplikacji,, który nie jest dobrze odizolowany od reszty.
+W takich sytuacjach pewnie co chwilę trzeba uaktualniać snapshoty, a to przecież mija się z celem.
 
-W sumie są całkiem fajne i wymagają niewielkiej ilości kodu do napisania, ale też nie są do wszystkiego i, jak zawsze, trzeba uważać i korzystać z wyczuciem.
+W sumie takie testy są całkiem fajne i wymagają niewielkiej ilości kodu do napisania, ale też nie są do wszystkiego i, jak zawsze, trzeba uważać i korzystać z wyczuciem.
 Najbardziej pewnie nadają się do tego, żeby testować względnie małe, wyizolowane i stabilne już komponenty, żeby je w pewien sposób _zabetonować_ i zabezpieczyć się przed nieoczekiwanymi zmianami.
 
-([Fajny artykuł](http://randycoulman.com/blog/2016/09/06/snapshot-testing-use-with-care/) na temat wad i zalet takiego testowania).
+([Fajny artykuł](http://randycoulman.com/blog/2016/09/06/snapshot-testing-use-with-care/) na temat wad i zalet takiego testowania, a także o tym, że ten rodzaj testów, to wcale nie taki nowy pomysł).
