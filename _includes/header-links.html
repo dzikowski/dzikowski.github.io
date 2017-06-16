@@ -1,22 +1,17 @@
 <ul>
-<!--	<li>
-		<a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">O mnie</a><span>/</span>
-	</li> -->
 	<li>
-		<a href="{{ '/links' | prepend: site.baseurl | prepend: site.url }}">Przegląd linków</a><span>/</span>
+		<a href="https://github.com/withspace/serverless-webapp-starter" target="_blank">Starter</a><span>/</span>
 	</li>
 	<li>
 		<a href="{{ '/archive' | prepend: site.baseurl | prepend: site.url }}">Archiwum bloga</a><span>/</span>
 	</li>
-	{% if site.harmony.social.github %}
 	<li>
-		<a title="{{ site.harmony.social.github }} on Github" 
-			href="https://github.com/dzikowski" target="_blank">
-			Moje repozytoria
-		</a><span>/</span>
+		<a href="https://github.com/dzikowski" target="_blank">Moje repozytoria</a><span>/</span>
 	</li>
-	{% endif %}
 	<li>
 		<a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">O mnie</a><span>/</span>
+	</li>
+	<li>
+		<a href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">RSS</a><span>/</span>
 	</li>
 </ul>
