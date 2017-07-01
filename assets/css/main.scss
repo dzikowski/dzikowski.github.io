@@ -70,6 +70,7 @@ body {
 h1, h2, h3, h4, h5, h6 { 
   line-height: 1.6;
   margin: 1.5em 0 0.2em 0em;
+  text-align: left;
 }
 
 h1 {
@@ -730,6 +731,9 @@ div.posts {
     .leading {
         h2 {
             font-size: 1.3em;
+            text-align: left;
+            height: 2.2em;
+            line-height: 1.2em;
         }
         .post-date {
             font-size: .75em;
